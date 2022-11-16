@@ -17,6 +17,8 @@
 
 ### Create typescript file(.ts)
 
-### Tranpile
+### Transpile
+ - tsc -t ES2016 relative_path.ts
+ - node relative_path.js
 
 `tsc {file}.ts`
