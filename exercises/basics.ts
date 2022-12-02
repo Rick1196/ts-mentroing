@@ -10,6 +10,30 @@ type Product = {
   categories: string[];
   disscount?: number;
 };
+
+type PersonComplex = {
+  name: string | { firstName: string; lastName: string };
+  address: string;
+  age?: number;
+};
+
+const person1: PersonComplex = {
+  name: "Ricardo Perez",
+  address: "Metepec",
+  age: 26,
+};
+const person2: PersonComplex = {
+  name: { firstName: "Ricardo", lastName: "Perez" },
+  address: "Metepec",
+  age: 26,
+};
+
+interface ProductI {
+  name: string;
+  price: number;
+  categories: string[];
+  disscount?: number;
+}
 // create an array with 10 or more items of type Product each product must have at least one of the following categories:
 /**
  * books
@@ -101,3 +125,22 @@ function valor(x: number, array: number[]) {
     }
   }
 }
+const exampleVariable = [];
+const exampleFunction = (x: number, y: number) => {
+  const exampleVariable2 = 3.1416;
+  return x + y / exampleVariable2;
+};
+function exampleFunction2(x: number, y: number): number {
+  try {
+    const result = (x + y) / 2;
+    if (result === Infinity) {
+      throw new Error("Undefined result");
+    }
+    return result;
+  } catch (error) {
+    console.log(error);
+    return 0;
+  }
+}
+
+console.log(exampleFunction2(1, 2));

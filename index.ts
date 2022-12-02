@@ -23,6 +23,7 @@ exampleString2 = "string";
 
 // objecjet with an optional attribute
 const exampleObject2: { name?: string; addres: string } = { addres: null };
+
 exampleObject2["name"] = "ricardo";
 exampleObject2.name;
 
